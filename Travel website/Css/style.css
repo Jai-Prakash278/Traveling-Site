@@ -1,0 +1,882 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+/* =================== HTML Styling ============================ */
+
+root{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+ul li{
+    list-style: none;
+}
+
+a{
+    font-size: 1.6rem;
+    text-decoration: none;
+}
+
+p,li{
+    font-size: 1.6rem;
+    margin-bottom: 0.5em;
+    letter-spacing: 0.09em;
+    /* word-spacing: 0.15em; */
+}
+
+h1,h2,h3{
+    margin-bottom: 0.5em;
+    letter-spacing: 0.15em;
+    font-weight: 500;
+}
+
+/* ==================== Utility Classes ========================== */
+
+.container{
+    max-width: 1200px;
+    width:90%;
+    margin:0 auto;
+}
+
+.lg-heading{
+    font-size: 2.2rem;
+}
+
+.md-heading{
+    font-size: 1.7rem;
+}
+
+.text-red{
+    color:#e63946;
+}
+
+.text-light{
+    color:#f4f4f4;
+}
+
+.text-black{
+    color:#333;
+}
+
+.text-gray{
+    color:#555;
+}
+
+.bg-dark{
+    background-color: #263238;
+}
+
+.btn{
+    display: inline-block;
+    padding:0.5em 1.5em;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin:0.5em 0;
+}
+
+
+.btn-primary{
+    background-color: #f4f4f4;
+    border-radius: 10em;
+}
+
+
+.btn-primary:hover{
+    color:#ddd;
+}
+
+.btn-secondary{
+    background: #fff;
+    color: #e63946;
+    border-radius: 1.5em;
+    border:1px solid #e63946;
+}
+
+.btn-secondary:hover{
+    color:#fcf3f2;
+}
+
+/* ======================= Header Styling =============================== */
+.header{
+    position:relative;
+    height:97vh;
+    background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)) , url('../img/header3.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navbar{
+    /* border:2px solid white; */
+    padding:1rem;
+}
+
+/* .header .logo,
+.header .navbar a{
+    color:white;
+} */
+
+.navbar .logo{
+    float:left;
+}
+
+.navbar .nav-items{
+    float:right;
+    margin-top: 0.8rem;
+}
+
+.navbar .nav-item{
+    display:inline-block;
+    padding:0.8rem;
+    text-transform: uppercase;
+    font-size: 0.01rem;
+}
+
+.navbar a{
+    padding-bottom: 0.3rem;
+}
+
+.navbar a:link,
+.navbar a:visited{
+    color:#f4f4f4;
+}
+
+.navbar a:hover{
+    color:aqua;
+    border-bottom:1px solid #f4f4f4;
+}
+
+.navbar a:active{
+    color:green;
+}
+
+.navbar::after{
+    content:'';
+    display:block;
+    clear:both;
+}
+
+.logo-img{
+    height:3.5rem;
+    width:auto;
+    background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url('../img/world_tour_logo.png')
+}
+
+/* ==================== Header Content Styling ============================== */
+.header-content{
+    /* border:2px solid red; */
+    /* margin-top:10em;
+    padding:auto; */
+    text-align: center;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background: linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2));
+}
+
+.header-content h1{
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.header-content p{
+    text-transform: uppercase;
+}
+
+/* =============== Showcase Styling =========================== */
+.showcase{
+    background-color: #ddd;
+    padding:5rem 0;
+    /* padding-left: 8rem; */
+}
+
+.row{
+    height:350px;
+    width:1100px;
+    /* border:2px solid black; */
+    background: #fff;
+    box-shadow: 0px 0px 20px 0px #00000068;
+}
+
+.row1{
+    margin-bottom: 5rem;
+}
+
+.row1 .img-box, .row2 .text-box{
+    float:left;
+    width:50%;
+}
+
+.row2 .img-box, .row1 .text-box{
+    float:right;
+    width:50%;
+}
+
+.row .img-box{
+    /* border:4px solid red; */
+    height:100%;
+}
+
+.row .text-box{
+    /* border:4px solid green; */
+    padding:2rem;
+    height:100%;
+    text-align: center;
+}
+
+.row .img-box img{
+    display: inline-block;
+    height:100%;
+    width:100%;
+    object-fit: cover;
+}
+
+.row .text-box a{
+    float:left;
+}
+
+.row::after{
+    content:'';
+    display:block;
+    clear:both;
+}
+
+/* =================== Feature Section ============================ */
+.features{
+    /* border:2px solid green; */
+    padding:5rem 0px;
+}
+
+.box-wrapper{
+    box-shadow: 5px 5px 20px 0px #00000076;
+}
+
+.box{
+    width:33.3333%;
+    /* border:1px solid red; */
+    float:left;
+    text-align: center;
+}
+
+.box-1,.box-3{
+    background-color:#263238;
+    /* background-color:#210979; */
+    color:#fff;
+}
+
+.box-2{
+    background:linear-gradient(25deg,#d64c7f,#ee4758 50%);
+    /* background-color: #eeaee7; */
+    color:#fff;
+}
+
+.box i{
+    margin:0.5px 0;
+}
+
+.box-wrapper::after{
+    content: '';
+    display: block;
+    clear:both;
+}
+
+/* =================== Footer Styling ======================= */
+.footer{
+    /* border: 2px solid red; */
+    background-color:#1d6268;
+}
+
+/* .footer-box{
+    padding:3rem;
+    text-align: center;
+} */
+
+.footer-box .footer-icons{
+    padding:1.5rem;
+    text-align: center;
+    /* margin-left: 33rem; */
+}
+
+.footer-box .links i{
+    /* padding: 1rem; */
+    margin:1rem;
+}
+
+
+/* =============================== About Page ================================================ */
+/* ================== About Section Styling ============================== */
+.about{
+    margin:3rem 0;
+    /* border-bottom: 0.5rem solid  #e63946; */
+}
+
+/* .about-heading{
+    border-bottom: 0.5rem solid  #e63946;
+} */
+
+.about-heading::after{
+    content:"";
+    display:block;
+    border:3.5px solid #e63946;
+    width:100%;
+    /* width:200px; */
+}
+
+/* ===================== About box Styling ====================== */
+ .about-box{
+    /* border:2px solid green; */
+    text-align: center;
+    margin-top: 2rem;
+ }
+
+ .about-box1{
+    float:left;
+    width:50%;
+ }
+
+ .about-box2{
+    float:right;
+    width: 50%;
+ }
+
+ .about-box::after{
+    content:'';
+    display:block;
+    clear:both;
+ }
+
+ .about-box li::before{
+    content:'\2713';
+    font-weight: bold;
+    padding-right:1rem;
+    color:#e63946;
+ }
+ 
+/* ========================== info Section Styling ======================== */
+
+ .info{
+    /* border:2px solid green; */
+    margin-top: 3rem;
+    text-align: center;
+ }
+
+ .info .travelled{
+    float:left;
+    width:25%;
+ }
+
+ .info::after{
+    content:'';
+    display: block;
+    clear:both;
+ }
+
+ .info .travelled span{
+    font-size: 2rem;
+    font-weight: 700;
+ }
+
+ .info .travelled p{
+    font-size:1.7rem;
+    font-weight:700;
+ }
+
+ /* ========================= Banner Styling ========================= */
+ .banner{
+    margin-top:2rem;
+    background:linear-gradient(25deg,#d64c7f,#ee4758 50%);
+    padding:1.3rem 0.6rem;
+    color:#f4f4f4;
+    box-shadow: 5px 5px 10px #00000099;
+ }
+
+ .banner .banner-left{
+    float:left;
+    width:60%;
+ }
+
+ .banner .banner-right{
+    float:right;
+    width:40%;
+    text-align: right;
+ }
+
+.banner  a{
+    text-align: center;
+    display: inline-block;
+    font-weight:700;
+    font-size:2rem;
+    text-transform: uppercase;
+    border:4px solid white;
+    padding:0.3em 2.5em;
+    letter-spacing: 0.5rem;
+    color:#f4f4f4;
+ }
+
+ .banner::after{
+    content:'';
+    display: block;
+    clear:both;
+ }
+ 
+ .line{
+    font-weight:700;
+    font-size:1.4rem;
+    margin-top:1rem;
+ }
+
+ /* ================= Contact Us Styling ====================== */
+ .contact-form{
+    padding:5rem 0;
+    background: #f7f7f7;
+ }
+ 
+ .form-wrapper{
+    /* border:3px solid red; */
+    padding:2rem 1rem;
+    /* background-color: #f4f4f4; */
+ }
+
+ .form-wrapper .company-address{
+    height:740px;
+    width:49%;
+    float:left;
+    background: #fff;
+    /* margin-left:0.6rem; */
+    /* border:2px solid green; */
+    padding:1rem;
+ }
+
+ .form-wrapper .company-address i{
+    display:inline-block;
+    margin-right:1rem;
+ }
+
+ .form-wrapper .company-address h2{
+    display:inline-block;
+    text-transform: uppercase;
+ }
+
+ .form-wrapper .company-address img{
+    max-width: 90%;
+    min-height:20rem;
+    object-fit: cover;
+    object-position: center;
+ }
+
+ .form-wrapper .address-group{
+    margin-bottom: 2rem;
+ }
+
+
+ .form-wrapper .form{
+    height:740px;
+    font-size: 1.4rem;
+    width:49%;
+    float:right;
+    /* border:2px solid green; */
+    background-color: #fff;
+    padding:1rem;
+ }
+
+ .form-wrapper::after{
+    content:'';
+    display: block;
+    clear:both;
+ }
+
+
+
+
+ /* ======== Company address Styling ============ */
+ /* .details{
+    padding:0.2rem;
+    font-weight: 400;
+    margin-left:0.2rem;
+    margin-left:1rem;
+ }
+
+ .dot{
+    display: inline-block;
+    text-transform: uppercase;
+ }
+
+ .image{
+    margin-top:0.3rem;
+ }
+
+ .image img{
+    width:90%;
+    object-fit:fill;
+ } */
+
+ /* =============== Form Styling =================== */
+ .form h2{
+    margin-left: 0.4rem;
+ }
+ 
+ .contact-heading::after{
+    content:"";
+    display:block;
+    border:3.5px solid #e63946;
+    width:98%;
+    /* width:200px; */
+}
+
+.form-wrapper .form .nameleft{
+    width:45%;
+    float:left;
+    /* border:2px solid pink; */
+}
+
+.form-wrapper .form .nameright{
+    width:45%;
+    float:right;
+    /* border:3px solid purple; */
+    margin-right:2rem;
+}
+
+.form .name::after{
+    content:'';
+    display: block;
+    clear:both;
+}
+
+.form-wrapper .form label{
+    display:block;
+}
+
+.form-wrapper .form input{
+    padding:0.3rem;
+    width:80%;
+}
+
+.form-wrapper .form-group{
+    margin-bottom:1.3rem;
+}
+
+.form-wrapper .form .star::after{
+    content:'* ';
+    color:#e63946;
+}
+
+.form-wrapper .form textarea{
+    width:70%;
+    height:200px;
+    padding:1rem;
+}
+
+.form-btn{
+    display:block;
+    text-transform: uppercase;
+    margin:0px auto;
+    padding:0.3rem 1.7rem;
+    font-size:1.75rem;
+    outline: none;
+    border:none;
+    border-radius: 5rem;
+    color:#fff;
+    background:#ee4758;
+    cursor:pointer;
+}
+
+.form-wrapper .form .heading-para p{
+    margin-bottom:1.7rem;
+}
+
+/* .form-wrapper .form a{ 
+    background:blue;
+    color:#e63946;
+    text-transform: capitalize;
+    margin-left:10rem;
+}
+
+.form-wrapper .form i{
+    text-align: center;
+} */
+
+/* ====================== More page styling ====================== */
+.information{
+    /* border: 2px solid red; */
+    background:#f7f7f7;
+    margin:2rem 2rem;
+}
+
+.information .all-info .info{
+    padding:2rem;
+    /* border:2px solid green; */
+    margin:5rem 5rem;
+    background:#fff;
+}
+
+.all-info .info h1{
+    font-size: 2.5rem;
+    font-weight:bolder;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom:6px dashed #d64c7f;
+}
+
+.all-info .info img{
+    /* margin-left:2rem;
+    margin-bottom: 3rem;
+    margin-right:3rem; */
+    text-align: center;
+    width:1000px;
+}
+
+.all-info .info h2{
+    font-weight: 500;
+    font-size:3rem;
+    letter-spacing: 0.1rem;
+    /* word-spacing: 0.1rem; */
+    margin-left:3rem;
+}
+
+.all-info .info p{
+    font-size: 1.6rem;
+    text-align:left;
+    text-decoration:solid;
+}
+
+/* ============ Media Queries =================== */
+@media (max-width : 480px){
+    html{
+        font-size:8px;
+    }
+
+    .navbar .nav-items, .navbar .logo{
+        float:none;
+        display:block;
+        width:100%;
+        text-align:center;
+    }
+
+    .showcase{
+        padding-left: 1rem;
+    }
+
+    .row{
+        height:auto;
+        width:100%;
+        /* margin-right:7rem; */
+    }
+
+    .row .text-box,
+    .row .img-box{
+        float:none;
+        display: block;
+        width:100%;
+        text-align:center;
+    }
+
+    .features .box{
+        float:none;
+        width:100%;
+        text-align: center;
+        box-shadow: 5px 5px 8px 0px #00000076;
+    }
+
+    .features .box-2,.features .box-3{
+        margin-top:3rem;
+    }
+
+    .box-wrapper{
+        box-shadow:none;
+    }
+
+    .about .banner .banner-left,
+    .about .banner .banner-right{
+        float:none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .form-wrapper .company-address,
+    .form-wrapper .form{
+        float:none;
+        width:100%;
+        height: auto;
+        text-align: center;
+    }
+
+    .form-wrapper .form{
+        margin-top:5rem;
+    }
+
+
+    .information .all-info .info img{
+        width:130px;
+        height:auto;
+    }
+
+    .information .all-info .info p{
+        font-size: 1.8rem;
+    }
+}
+
+@media(min-width: 481px) and (max-width: 768px){
+    html{
+        font-size:8px;
+    }
+
+    p{
+        font-size:2.2rem;
+    }
+
+    .header-content .lg-heading{
+        font-size:3rem;
+        margin-bottom: 2rem;
+    }
+
+    .navbar .nav-items, .navbar .logo{
+        float:none;
+        display:block;
+        width:100%;
+        text-align:center;
+    }
+
+    .showcase{
+        padding-left: 1rem;
+    }
+
+    .row{
+        height:auto;
+        width:100%;
+        /* margin-right:7rem; */
+    }
+
+    .row .text-box,
+    .row .img-box{
+        float:none;
+        display: block;
+        width:100%;
+        text-align:center;
+    }
+
+    .features .box{
+        float:none;
+        width:100%;
+        text-align: center;
+        box-shadow: 5px 5px 8px 0px #00000076;
+    }
+
+    .features .box-2,.features .box-3{
+        margin-top:3rem;
+    }
+
+    .box-wrapper{
+        box-shadow:none;
+    }
+
+    .about .banner .banner-left,
+    .about .banner .banner-right{
+        float:none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .form-wrapper .company-address,
+    .form-wrapper .form{
+        float:none;
+        width:100%;
+        height: auto;
+        text-align: center;
+    }
+
+    .form-wrapper .form{
+        margin-top:5rem;
+    }
+
+    .information .all-info .info img{
+        width:310px;
+        height:auto;
+    }
+
+    .information .all-info .info p{
+        font-size:2rem;
+    }
+}
+
+
+@media (min-width: 769px) and (max-width: 1180px){
+    .showcase{
+        padding-left: 4.5rem;
+    }
+
+    .row{
+        height:auto;
+        width:90%;
+    }
+
+    .row .text-box,
+    .row .img-box{
+        float:none;
+        display: block;
+        width:100%;
+        text-align:center;
+    }
+
+    .features .box{
+        float:none;
+        width:100%;
+        text-align: center;
+        box-shadow: 5px 5px 15px 0px #00000076;
+    }
+
+    .features .box-2,.features .box-3{
+        margin-top:3rem;
+    }
+
+    .box-wrapper{
+        box-shadow:none;
+    }
+
+    .about .banner .banner-left,
+    .about .banner .banner-right{
+        float:none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .form-wrapper .company-address,
+    .form-wrapper .form{
+        float:none;
+        width:100%;
+        height: auto;
+        text-align: center;
+    }
+
+    .form-wrapper .form{
+        margin-top:5rem;
+    }
+
+    .information .all-info .info img{
+        width: 450px;;
+        height:auto;
+    }
+}
+
+@media (min-width : 1181px){
+    .information .all-info .info img{
+        width:850px;
+        height:auto;
+    }
+}
+
+
+@media (orientation:landscape) and (max-height: 500px){
+    .header{
+        height:90vmax;
+    }
+}
